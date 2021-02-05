@@ -22,6 +22,7 @@ https://api.zoomos.by/item/178782?key=api-help
 Пример работы API:
 
 /filter/list?categoryId=123
+<<<<<<< HEAD
 
 >
         [
@@ -47,6 +48,29 @@ https://api.zoomos.by/item/178782?key=api-help
         ]
 >
 
+=======
+    [
+        {
+            "type": "list",
+            "code": "brand",
+            "name": "Бренд",
+            "values": [
+                "HP", "ASUS", "Acer"
+            ]
+        },
+        {
+            "type": "range",
+            "code": "price",
+            "name": "Цена",
+            "values": [100, 10000]
+        },
+        {
+            "type": "bool",
+            "code": "available",
+            "name": "В наличии"
+        }
+        ]
+>>>>>>> 558ee7ba1ff4b774f6b701b4b6514188c1dd539b
 
 /filter/run?available=1&brand[]=HP
 
