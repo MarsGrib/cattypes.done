@@ -15,6 +15,9 @@ class CreatePropertiesTable extends Migration
     {
         Schema::create('properties', function (Blueprint $table) {
             $table->id();
+            $table->tinyInteger('type_id'); //1-list 2-range 3-bool
+            $table->string('name');  
+            $table->string('code');  
             $table->timestamps();
         });
     }

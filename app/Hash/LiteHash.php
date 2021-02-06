@@ -24,7 +24,8 @@ class LiteHash
     {
         if($keyName==null)  return null;
        
-            $filePath=static::getFilePath();
+        $filePath=static::getFilePath();
+
             try {
                 $data=json_decode(Storage::disk('local')->get($filePath));
             } catch (\Illuminate\Contracts\Filesystem\FileNotFoundException $th) {
@@ -32,8 +33,12 @@ class LiteHash
                 $data->$keyName=$value;
                 Storage::disk('local')->put($filePath, json_encode($data));
             }
-            return (is_object($data)) ? $data->$keyName : $value;                     
-    }
+
+            return (is_object($data) && isset($data->$keyName)) ? $data->$keyName : $value; 
+             
+
+        }
+            
 
     public static function setHashKey($keyName,$value=null)
     {

@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Models\Market\Categories;
+namespace App\Models\Market;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Properties extends Model
+class PropertyType extends Model
 {
     use HasFactory;
 }
